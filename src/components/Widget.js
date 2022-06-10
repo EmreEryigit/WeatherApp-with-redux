@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { weatherActions } from "../store/weatherSlice";
+import DropDown from "./DropDown";
 function Widget() {
   const dispatch = useDispatch();
 
@@ -21,29 +22,31 @@ function Widget() {
   }, [city]);
   getWeather();
 
- 
   const today = new Date();
 
   const hour = today.getHours();
 
- 
   let cardClasses;
   if (hour < 6 || hour > 20) {
     cardClasses = "night";
   }
   return (
-    <div
-      className={`card shadow-lg border ${cardClasses}`}
-      style={{ backgroundColor: "black" }}
-    >
-      <div className="card-body">
-        <CurrentWeather />
-      </div>
+    <>
+      <DropDown />
 
-      <div className="card-footer">
-        <WeekWeather />
+      <div
+        className={`card shadow-lg border ${cardClasses}`}
+        style={{ backgroundColor: "black" }}
+      >
+        <div className="card-body">
+          <CurrentWeather />
+        </div>
+
+        <div className="card-footer">
+          <WeekWeather />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "weatherappp-8d379",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

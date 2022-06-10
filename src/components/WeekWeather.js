@@ -32,7 +32,7 @@ function WeekWeather() {
   }
   return (
     <div>
-      {weather.map((day,i) => (
+      {weather.map((day, i) => (
         <Card day={day} key={i} />
       ))}
     </div>

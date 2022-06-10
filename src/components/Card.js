@@ -21,7 +21,6 @@ function Card(props) {
   const today = new Date();
   const hour = today.getHours();
 
-  
   let cardClasses;
   if (hour < 6 || hour > 20) {
     cardClasses = "night";

@@ -13,7 +13,7 @@ const weatherSlice = createSlice({
   },
   reducers: {
     setCity: (state, action) => {
-      state.city = cities.find((city) => city.name === action.payload);
+      state.city = action.payload;
     },
     setCurrentWeather: (state, action) => {
       state.currentWeather = action.payload;
