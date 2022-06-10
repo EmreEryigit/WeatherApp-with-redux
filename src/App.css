@@ -1,12 +1,21 @@
 .App {
   text-align: center;
+  margin: 8rem 0 0 0;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.card {
+  background-color: transparent;
+  background-image: url("https://images.unsplash.com/photo-1582485565167-75055e5e6b5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+  border-radius: 15px;
+  
+}
+.card.night {
+  background-image: url("https://images.unsplash.com/photo-1488866022504-f2584929ca5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1724&q=80");
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
